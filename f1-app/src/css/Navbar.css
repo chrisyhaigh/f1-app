@@ -1,0 +1,15 @@
+
+.navbar {
+    background-color: black;
+}
+
+.navbar.navbar-dark .navbar-nav .nav-link.link-font {
+    color: white;
+}
+
+.navbar.navbar-dark .navbar-nav .nav-link.link-font:hover {
+    color: gold;
+  }
+
+
+

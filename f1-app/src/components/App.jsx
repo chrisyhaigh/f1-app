@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react"
+import { Link } from 'react-router-dom'
+import '../css/App.css'
+import Drivers from './Drivers'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+    return (
+      <div className="container-home">
+        <div className="row">
+            <div className="box">
+              <Link to="/Drivers">
+                <div className="image-container">
+                  <img className="helmet-image" src="/src/images/img_edmartinez_20160315-230015_imagenes_md_otras_fuentes_no_archivables_alonso-k4PE--911x683@MundoDeportivo-Web.png" width="160" />
+                </div>
+                <div className="driver-title">
+                  <h3 className="text-center text-white">Drivers Standings</h3>
+                </div>
+              </Link>
+            </div>
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+            <div className="box">
+              <a href='#'>
+                  <div className="image-container">
+                    <img className="car-image" src="/src/images/purepng.com-red-lotus-e23-f1.png" width="200" />
+                  </div>
+                  <div className="constructor-title">
+                    <h3 className="text-center text-white">Constructor Standings</h3>
+                  </div>
+              </a>
+            </div>
+
+            <div className="box">
+              <a href='#'>
+                <div className="image-container">
+                  <img className="flag-image" src="/src/images/checkered-racing-flags-hi.png" width="200" />
+                </div>
+                <div className="races-title">
+                  <h3 className="text-center text-white">Races</h3>
+                </div>
+              </a>
+            </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    )
 }
 
 export default App
